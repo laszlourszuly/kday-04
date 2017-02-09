@@ -1,3 +1,4 @@
+// Use the Android library gradle plugin
 apply plugin: 'com.android.library'
 
 // Force Retrolambda to output Java7 compatible byte code
@@ -9,9 +10,8 @@ retrolambda {
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
-
     defaultConfig {
-        // Note! No application id for library projects
+        // Note! No "applicationId" attribute for library projects
         
         minSdkVersion 16
         targetSdkVersion 25
@@ -30,9 +30,3 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 }
-
-// Library dependencies
-dependencies {
-    // Same as for app projects
-}
-
