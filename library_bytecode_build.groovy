@@ -6,7 +6,7 @@ retrolambda {
     bytecodeVersion 51
 }
 
-// The regular Android library project configuration
+// Android configuration
 android {
     // ...
     
