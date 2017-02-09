@@ -1,18 +1,13 @@
 // Use the Android library gradle plugin
 apply plugin: 'com.android.library'
 
-// Force Retrolambda to output Java7 compatible byte code
-retrolambda {
-    bytecodeVersion 51
-}
-
 // Android configuration
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
+    // Note! No "applicationId" for library projects
     defaultConfig {
-        // Note! No "applicationId" attribute for library projects
-        
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
@@ -24,9 +19,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        // Force AAR to correct bytecode version
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
 }
+
